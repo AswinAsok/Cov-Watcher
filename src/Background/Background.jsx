@@ -3,6 +3,7 @@ import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import "./Background.css";
 import Header from "../Header/Header";
+import Display from "../Display/Display";
 
 const defaultProps = {
   bgcolor: "background.paper",
@@ -22,6 +23,7 @@ const Background = () => {
       <Grid container direction="row" justify="center" alignItems="center">
         <Box boxShadow={3} borderRadius={16} {...defaultProps}>
          <Header />
+         <Display />
         </Box>
       </Grid>
     </div>
