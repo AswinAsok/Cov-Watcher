@@ -1,13 +1,23 @@
 import React from "react";
+import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
-import Divider from "@material-ui/core/Divider";
-import "./Header.css";
+import './Header.css'
+
+const defaultProps = {
+  m: 1,
+  border: 1,
+  style: { width: "12rem", height: "3rem" },
+};
 
 const Header = () => {
   return (
     <div className="header">
       <Grid container direction="column" justify="center" alignItems="center">
-        <p>Covid-Watch</p>
+        <Box className="header-box" borderRadius={16} {...defaultProps}>
+        <Grid container direction="column" justify="center" alignItems="center">
+          <div className="header-text">Covid-Watch</div>
+          </Grid>
+        </Box>
       </Grid>
     </div>
   );

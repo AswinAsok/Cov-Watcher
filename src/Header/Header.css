@@ -1,6 +1,9 @@
-.header{
-    font-size: 26px;
-    background-color: #1B2432 ;
-    border-radius: 15px;
-    color: #ecebf1;
+.header-box{
+    background-color: #3772FF;
+    color: #FCF7FF;
+    font-size: x-large
+}
+
+.header-text{
+    margin-top: 10px;
 }

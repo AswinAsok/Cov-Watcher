@@ -21,7 +21,7 @@ const Background = () => {
     <div display="flex" justifyContent="center" className="main-container">
       <Grid container direction="row" justify="center" alignItems="center">
         <Box boxShadow={3} borderRadius={16} {...defaultProps}>
-          <Header/>
+         <Header />
         </Box>
       </Grid>
     </div>
