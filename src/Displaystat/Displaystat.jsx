@@ -6,7 +6,7 @@ import "./Displaystat.css";
 
 const defaultProps = {
   m: 2,
-  style: { width: "7rem", height: "3rem" },
+  style: { width: "15rem", height: "3rem" },
 };
 
 const Displaystat = ({ data, statecode }) => {
@@ -28,7 +28,6 @@ const Displaystat = ({ data, statecode }) => {
       {fetchstatedata()}
       <Grid container direction="row" justify="center" alignItems="center">
         <div>
-          <Grid item xs>
             <Box className="statrow1" borderRadius={9} {...defaultProps}>
               <Grid
                 container
@@ -40,10 +39,9 @@ const Displaystat = ({ data, statecode }) => {
                 <div>{statedata.active}</div>
               </Grid>
             </Box>
-          </Grid>
         </div>
         <div>
-          <Grid item xs>
+
             <Box className="statrow2" borderRadius={9} {...defaultProps}>
               <Grid
                 container
@@ -52,13 +50,11 @@ const Displaystat = ({ data, statecode }) => {
                 alignItems="center"
               >
                 <div className="stattextr1">Confirmed</div>
-                <div>{statedata.active}</div>
+                <div>{statedata.confirmed}</div>
               </Grid>
             </Box>
-          </Grid>
         </div>
         <div>
-          <Grid item xs>
             <Box className="statrow3" borderRadius={9} {...defaultProps}>
               <Grid
                 container
@@ -71,7 +67,6 @@ const Displaystat = ({ data, statecode }) => {
                 <div>{statedata.deaths}</div>
               </Grid>
             </Box>
-          </Grid>
         </div>
       </Grid>
     </div>
