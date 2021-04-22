@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import Box from '@material-ui/core/Box';
+import Box from "@material-ui/core/Box";
+import "./Displaystat.css";
 
 const defaultProps = {
-    bgcolor: 'background.paper',
-    borderColor: 'text.primary',
-    m: 1,
-    border: 1,
-    style: { width: '5rem', height: '5rem' },
-  };
+  m: 2,
+  style: { width: "7rem", height: "3rem" },
+};
 
 const Displaystat = ({ data, statecode }) => {
-  const classes = useStyles();
   const [statedata, setStatedata] = useState({ empty: "yes" });
 
   const fetchstatedata = () => {
@@ -29,26 +26,51 @@ const Displaystat = ({ data, statecode }) => {
   return (
     <div>
       {fetchstatedata()}
-      <Grid
-        container
-        direction="row"
-        justify="space-evenly"
-        alignItems="center"
-        spacing={3}
-      >
+      <Grid container direction="row" justify="center" alignItems="center">
         <div>
           <Grid item xs>
-            <p>{statedata.active}</p>
+            <Box className="statrow1" borderRadius={9} {...defaultProps}>
+              <Grid
+                container
+                direction="column"
+                justify="center"
+                alignItems="center"
+              >
+                <div className="stattextr1">Active</div>
+                <div>{statedata.active}</div>
+              </Grid>
+            </Box>
           </Grid>
         </div>
         <div>
           <Grid item xs>
-            <p>{statedata.confirmed}</p>
+            <Box className="statrow2" borderRadius={9} {...defaultProps}>
+              <Grid
+                container
+                direction="column"
+                justify="center"
+                alignItems="center"
+              >
+                <div className="stattextr1">Confirmed</div>
+                <div>{statedata.active}</div>
+              </Grid>
+            </Box>
           </Grid>
         </div>
         <div>
           <Grid item xs>
-            <p>{statedata.deaths}</p>
+            <Box className="statrow3" borderRadius={9} {...defaultProps}>
+              <Grid
+                container
+                direction="column"
+                justify="center"
+                alignItems="center"
+                className="stattextr1"
+              >
+                <div className="stattextr1">Deaths</div>
+                <div>{statedata.deaths}</div>
+              </Grid>
+            </Box>
           </Grid>
         </div>
       </Grid>
