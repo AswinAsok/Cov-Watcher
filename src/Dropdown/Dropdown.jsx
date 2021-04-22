@@ -29,21 +29,29 @@ const Dropdown = ({ data }) => {
     }
   };
 
-
   return (
     <div>
-      <FormControl variant="outlined" className={classes.formControl}>
-        <InputLabel id="demo-simple-select-outlined-label">Age</InputLabel>
+      <FormControl className={classes.formControl}>
+        <InputLabel id="demo-simple-select-autowidth-label">Age</InputLabel>
         <Select
-          labelId="demo-simple-select-outlined-label"
-          id="demo-simple-select-outlined"
-          label="Age"
+          labelId="demo-simple-select-autowidth-label"
+          id="demo-simple-select-autowidth"
+          autoWidth
         >
           <MenuItem value="">
-            <em>None </em>
+            <em>None</em>
           </MenuItem>
+
+          {makearray()}
+          {states_array.map((state, index) => (
+            <MenuItem value={state} key={index}>
+                {state}
+                {console.log(state)}
+            </MenuItem>
+          ))}
+          
         </Select>
-        {makearray()}
+        <FormHelperText>Auto width</FormHelperText>
       </FormControl>
     </div>
   );
