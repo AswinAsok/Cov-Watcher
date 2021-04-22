@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
-import FormHelperText from "@material-ui/core/FormHelperText";
+import Grid from "@material-ui/core/Grid";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
-    minWidth: 120,
+    minWidth: 300,
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -31,12 +31,12 @@ const Dropdown = ({ data }) => {
 
   return (
     <div>
-      <FormControl className={classes.formControl}>
-        <InputLabel id="demo-simple-select-autowidth-label">Age</InputLabel>
+      <Grid container direction="row" justify="center" alignItems="center">
+        <FormControl variant="outlined" className={classes.formControl}>
+        <InputLabel id="demo-simple-select-outlined-label">Select State</InputLabel>
         <Select
-          labelId="demo-simple-select-autowidth-label"
-          id="demo-simple-select-autowidth"
-          autoWidth
+          labelId="demo-simple-select-outlined-label"
+          id="demo-simple-select-outlined"
         >
           <MenuItem value="">
             <em>None</em>
@@ -45,14 +45,13 @@ const Dropdown = ({ data }) => {
           {makearray()}
           {states_array.map((state, index) => (
             <MenuItem value={state} key={index}>
-                {state}
-                {console.log(state)}
+              {state}
+              {console.log(state)}
             </MenuItem>
           ))}
-          
         </Select>
-        <FormHelperText>Auto width</FormHelperText>
       </FormControl>
+      </Grid>
     </div>
   );
 };
