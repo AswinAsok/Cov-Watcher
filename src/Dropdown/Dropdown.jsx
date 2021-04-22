@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
 const Dropdown = ({ data }) => {
   const classes = useStyles();
   const states_array = [];
+  const [statecode, setStateCode] = useState("");
 
   const makearray = () => {
     if (data.empty !== "yes") {
@@ -33,24 +34,24 @@ const Dropdown = ({ data }) => {
     <div>
       <Grid container direction="row" justify="center" alignItems="center">
         <FormControl variant="outlined" className={classes.formControl}>
-        <InputLabel id="demo-simple-select-outlined-label">Select State</InputLabel>
-        <Select
-          labelId="demo-simple-select-outlined-label"
-          id="demo-simple-select-outlined"
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-
-          {makearray()}
-          {states_array.map((state, index) => (
-            <MenuItem value={state} key={index}>
-              {state}
-              {console.log(state)}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+          <InputLabel id="demo-simple-select-outlined-label">
+            Select State
+          </InputLabel>
+          <Select
+            labelId="demo-simple-select-outlined-label"
+            id="demo-simple-select-outlined"
+            onChange={(event) => {
+              setStateCode(event.target.value);
+            }}
+          >
+            {makearray()}
+            {states_array.map((state, index) => (
+              <MenuItem value={state} key={index}>
+                {state}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
       </Grid>
     </div>
   );
