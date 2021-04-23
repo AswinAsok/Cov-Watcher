@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Dropdown from "../Dropdown/Dropdown";
 import Divider from "@material-ui/core/Divider";
+import Nationalstat from "../Nationalstat/Nationalstat";
 
 const Display = () => {
-  const [data, setData] = useState({empty: "yes"});
+  const [data, setData] = useState({ empty: "yes" });
 
   useEffect(() => {
     fetchdata();
@@ -22,8 +23,13 @@ const Display = () => {
 
   return (
     <div>
+      {(() => {
+        if (data.empty !== "yes") {
+          return <Nationalstat data={data.cases_time_series} />;
+        }
+      })()}
       <Divider />
-      <Dropdown data={data}/>
+      <Dropdown data={data} />
     </div>
   );
 };
