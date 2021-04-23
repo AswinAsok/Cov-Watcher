@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import "./Displaystat.css";
+import Nationalstat from "../Nationalstat/Nationalstat";
 
 const defaultProps = {
   m: 1.25,
@@ -65,7 +66,7 @@ const Displaystat = ({ data, statecode }) => {
         </Box>
       </Grid>
 
-      {console.log(statedata)}
+      <Nationalstat data={data.cases_time_series}/>
     </div>
   );
 };
