@@ -25,7 +25,7 @@ const Dropdown = ({ data }) => {
   const makearray = () => {
     if (data.empty !== "yes") {
       for (var i = 0; i < 38; i++) {
-        var state = data.statewise[i].statecode;
+        var state = data.statewise[i].state;
         states_array.push(state);
       }
     }
