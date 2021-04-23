@@ -12,7 +12,7 @@ const defaultProps = {
   style: {
     width: "95%",
     marginTop: "3rem",
-    marginBottom: "3rem",
+    marginBottom: "1rem",
     paddingBottom: "2rem"
   },
 };
