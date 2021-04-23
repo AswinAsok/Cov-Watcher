@@ -9,14 +9,15 @@ const defaultProps = {
   style: { width: "25vw", height: "6.5vh" },
 };
 
-const Displaystat = ({ data, statecode }) => {
-  const [statedata, setStatedata] = useState({ empty: "yes" });
+const Displaystat = ({ data, statecode, statedata, setStatedata }) => {
+  
 
   const fetchstatedata = () => {
     if (statedata.empty === "yes" && data.empty !== "yes") {
       for (var i = 0; i < 38; i++) {
         if (data.statewise[i].state === statecode) {
           setStatedata(data.statewise[i]);
+          console.log("Hello")
           break;
         }
       }
@@ -26,6 +27,7 @@ const Displaystat = ({ data, statecode }) => {
   return (
     <div>
       {fetchstatedata()}
+      {console.log(statecode)}
       <br></br>
       <div className="headingone">
         <Grid container direction="column" justify="center" alignItems="center">

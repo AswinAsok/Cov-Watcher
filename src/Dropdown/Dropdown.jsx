@@ -21,6 +21,7 @@ const Dropdown = ({ data }) => {
   const classes = useStyles();
   const states_array = [];
   const [statecode, setStateCode] = useState("");
+  const [statedata, setStatedata] = useState({ empty: "yes" });
 
   const makearray = () => {
     if (data.empty !== "yes") {
@@ -43,6 +44,7 @@ const Dropdown = ({ data }) => {
             id="demo-simple-select-outlined"
             onChange={(event) => {
               setStateCode(event.target.value);
+              setStatedata({ empty: "yes" });
             }}
           >
             {makearray()}
@@ -55,7 +57,7 @@ const Dropdown = ({ data }) => {
         </FormControl>
       </Grid>
       
-      <Displaystat data={data} statecode={statecode}/>
+      <Displaystat data={data} statecode={statecode} statedata={statedata} setStatedata={setStatedata}/>
     </div>
   );
 };
