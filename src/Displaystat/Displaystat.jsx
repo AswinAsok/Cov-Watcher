@@ -9,6 +9,11 @@ const defaultProps = {
   style: { width: "150px", height: "3rem" },
 };
 
+const defaultProps1 = {
+  m: 1,
+  style: { width: "115px", height: "2rem" },
+};
+
 const Displaystat = ({ data, statecode }) => {
   const [statedata, setStatedata] = useState({ empty: "yes" });
 
@@ -26,101 +31,49 @@ const Displaystat = ({ data, statecode }) => {
   return (
     <div>
       {fetchstatedata()}
-      <Grid container  direction="row" justify="center" alignItems="center">
+      <br></br>
+      
+      <Grid container direction="row" justify="center" alignItems="center">
         <div>
-          <Grid item xs={3}>
-            <Box className="statrow1" borderRadius={9} {...defaultProps}>
-              <Grid
-                container
-                direction="column"
-                justify="center"
-                alignItems="center"
-              >
-                <div className="stattextr1">Active</div>
-                <div>{statedata.active}</div>
-              </Grid>
-            </Box>
-          </Grid>
+          <Box className="statrow1" borderRadius={9} {...defaultProps}>
+            <div className="stattextr1">Active</div>
+            <div className="stattextr1">{statedata.active}</div>
+          </Box>
         </div>
         <div>
-          <Grid item xs={6}>
-            <Box className="statrow2" borderRadius={9} {...defaultProps}>
-              <Grid
-                container
-                direction="column"
-                justify="center"
-                alignItems="center"
-              >
-                <div className="stattextr1">Confirmed</div>
-                <div>{statedata.confirmed}</div>
-              </Grid>
-            </Box>
-          </Grid>
+          <Box className="statrow2" borderRadius={9} {...defaultProps}>
+            <div className="stattextr1">Confirmed</div>
+            <div className="stattextr1">{statedata.confirmed}</div>
+          </Box>
         </div>
         <div>
-          <Grid item xs={3}>
-            <Box className="statrow3" borderRadius={9} {...defaultProps}>
-              <Grid
-                container
-                direction="column"
-                justify="center"
-                alignItems="center"
-                className="stattextr1"
-              >
-                <div className="stattextr1">Deaths</div>
-                <div>{statedata.deaths}</div>
-              </Grid>
-            </Box>
-          </Grid>
+          <Box className="statrow3" borderRadius={9} {...defaultProps}>
+            <div className="stattextr1">Deaths</div>
+            <div className="stattextr1">{statedata.deaths}</div>
+          </Box>
         </div>
       </Grid>
 
-      <Grid container  direction="row" justify="center" alignItems="center">
+      <br></br>
+
+      <Grid container direction="row" justify="center" alignItems="center">
         <div>
-          <Grid item xs={3}>
             <Box className="statrow11" borderRadius={9} {...defaultProps}>
-              <Grid
-                container
-                direction="column"
-                justify="center"
-                alignItems="center"
-              >
-                <div className="stattextr1">New Cases</div>
-                <div>{statedata.deltaconfirmed}</div>
-              </Grid>
+              <div className="stattextr1">New Cases</div>
+              <div className="stattextr1">{statedata.deltaconfirmed}</div>
             </Box>
-          </Grid>
         </div>
         <div>
-          <Grid item xs={6}>
             <Box className="statrow12" borderRadius={9} {...defaultProps}>
-              <Grid
-                container
-                direction="column"
-                justify="center"
-                alignItems="center"
-              >
-                <div className="stattextr1">Newly Recovered</div>
-                <div>{statedata.deltarecovered}</div>
-              </Grid>
+              <div className="stattextr1">Newly Recovered</div>
+              <div className="stattextr1">{statedata.deltarecovered}</div>
             </Box>
-          </Grid>
         </div>
         <div>
-          <Grid item xs={3}>
             <Box className="statrow13" borderRadius={9} {...defaultProps}>
-              <Grid
-                container
-                direction="column"
-                justify="center"
-                alignItems="center"
-                className="stattextr1"
-              >
-                <div className="stattextr1">New Deaths</div>
-                <div>{statedata.deltadeaths}</div>
-              </Grid>
+              <div className="stattextr1">New Deaths</div>
+              <div className="stattextr1">{statedata.deltadeaths}</div>
             </Box>
-          </Grid>
         </div>
       </Grid>
     </div>

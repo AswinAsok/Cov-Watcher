@@ -26,6 +26,8 @@
 }
 
 .stattextr1{
-    margin-top: 5px;
-    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+

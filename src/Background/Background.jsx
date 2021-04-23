@@ -11,7 +11,7 @@ const defaultProps = {
   m: 1,
   style: {
     width: "95%",
-    height: "40rem",
+    height: "80rem",
     marginTop: "3rem",
     marginBottom: "3rem",
   },
