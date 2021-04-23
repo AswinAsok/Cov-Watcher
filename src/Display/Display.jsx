@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Dropdown from "../Dropdown/Dropdown";
 import Divider from "@material-ui/core/Divider";
+import Grid from "@material-ui/core/Grid";
 import Nationalstat from "../Nationalstat/Nationalstat";
+import './Display.css'
 
 const Display = () => {
   const [data, setData] = useState({ empty: "yes" });
@@ -31,6 +33,16 @@ const Display = () => {
       <br></br>
       <Divider />
       <br></br>
+      <Grid
+        container
+        direction="column"
+        justify="center"
+        alignItems="center"
+      >
+      <div>
+        <p className = "statewise">State-Wise Covid-19 Details</p>
+      </div>
+      </Grid>
       <Dropdown data={data} />
     </div>
   );

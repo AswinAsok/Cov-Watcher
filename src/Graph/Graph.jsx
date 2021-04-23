@@ -20,6 +20,7 @@ const Graph = ({ data }) => {
     <div>
       {storeconfirmed()}
       <div className="chart1">
+
         <Line
           data={{
             labels: dates,
@@ -55,9 +56,13 @@ const Graph = ({ data }) => {
             tooltips: false,
           }}
         />
+
       </div>
+
     <br></br>
+
       <div className="chart1">
+
         <Line
           data={{
             labels: dates,
@@ -93,6 +98,7 @@ const Graph = ({ data }) => {
             tooltips: false,
           }}
         />
+        
       </div>
     </div>
   );
