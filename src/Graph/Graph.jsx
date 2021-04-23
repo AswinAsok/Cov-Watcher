@@ -26,7 +26,7 @@ const Graph = ({ data }) => {
             labels: dates,
             datasets: [
               {
-                label: "Daily Recovered Cases",
+                label: "Daily Confirmed Cases",
                 data: dailyconfirmed,
                 fill: true,
 
@@ -68,7 +68,7 @@ const Graph = ({ data }) => {
             labels: dates,
             datasets: [
               {
-                label: "Daily Confirmed Cases",
+                label: "Daily Recovered Cases",
                 data: dailyrecovered,
                 fill: true,
 

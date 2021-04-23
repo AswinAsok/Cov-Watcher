@@ -17,12 +17,13 @@ const Nationalstat = ({ data }) => {
     <div>
       <br></br>
       <Divider />
+      <br></br>
       <Grid container direction="row" justify="center" alignItems="center">
-        <Box className="nationalstatheading" borderRadius={9} {...defaultProps}>
-          <div className="nationalstattext">National Covid-19 Details</div>
-        </Box>
+        <div className="nationalstattext">National Covid-19 Details</div>
       </Grid>
-
+      <br></br>
+      <Divider />
+      <br></br>
       <Grid container direction="row" justify="center" alignItems="center">
         <Box className="statrow1" borderRadius={9} {...defaultProps}>
           <div className="stattextr11">Confirmed</div>
@@ -41,7 +42,7 @@ const Nationalstat = ({ data }) => {
       <Divider />
       <br></br>
       <Grid container direction="column" justify="center" alignItems="center">
-        <Graph data={data}/>
+        <Graph data={data} />
       </Grid>
     </div>
   );

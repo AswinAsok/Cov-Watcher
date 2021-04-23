@@ -32,10 +32,9 @@ const Display = () => {
       })()}
       <br></br>
       <Divider />
-      <br></br>
       <Grid
         container
-        direction="column"
+        direction="row"
         justify="center"
         alignItems="center"
       >
@@ -43,6 +42,8 @@ const Display = () => {
         <p className = "statewise">State-Wise Covid-19 Details</p>
       </div>
       </Grid>
+      <Divider />
+      <br></br>
       <Dropdown data={data} />
     </div>
   );

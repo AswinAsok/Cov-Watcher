@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 const Dropdown = ({ data }) => {
   const classes = useStyles();
   const states_array = [];
-  const [statecode, setStateCode] = useState("");
+  const [statecode, setStateCode] = useState("nil");
   const [statedata, setStatedata] = useState({ empty: "yes" });
 
   const makearray = () => {
@@ -56,8 +56,12 @@ const Dropdown = ({ data }) => {
           </Select>
         </FormControl>
       </Grid>
+      {(() => {
+        if (statecode !== "nil") {
+          return <Displaystat data={data} statecode={statecode} statedata={statedata} setStatedata={setStatedata}/>;
+        }
+      })()}
       
-      <Displaystat data={data} statecode={statecode} statedata={statedata} setStatedata={setStatedata}/>
     </div>
   );
 };
