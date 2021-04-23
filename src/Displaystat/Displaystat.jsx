@@ -27,9 +27,13 @@ const Displaystat = ({ data, statecode }) => {
     <div>
       {fetchstatedata()}
       <br></br>
-
+      <div className="headingone">
+        <Grid container direction="column" justify="center" alignItems="center">
+          <div>Last Updated: {statedata.lastupdatedtime}</div>
+          <br></br>
+        </Grid>
+      </div>
       <Grid container direction="row" justify="center" alignItems="center">
-        
         <Box className="statrow1" borderRadius={9} {...defaultProps}>
           <div className="stattextr11">Active</div>
           <div className="stattextr1">{statedata.active}</div>
@@ -47,20 +51,18 @@ const Displaystat = ({ data, statecode }) => {
       <br></br>
 
       <Grid container direction="row" justify="center" alignItems="center">
-
-          <Box className="statrow11" borderRadius={9} {...defaultProps}>
-            <div className="stattextr11">New Cases</div>
-            <div className="stattextr1">{statedata.deltaconfirmed}</div>
-          </Box>
-          <Box className="statrow12" borderRadius={9} {...defaultProps}>
-            <div className="stattextr11">Recovered</div>
-            <div className="stattextr1">{statedata.deltarecovered}</div>
-          </Box>
-          <Box className="statrow13" borderRadius={9} {...defaultProps}>
-            <div className="stattextr11">New Deaths</div>
-            <div className="stattextr1">{statedata.deltadeaths}</div>
-          </Box>
-
+        <Box className="statrow11" borderRadius={9} {...defaultProps}>
+          <div className="stattextr11">New Cases</div>
+          <div className="stattextr1">{statedata.deltaconfirmed}</div>
+        </Box>
+        <Box className="statrow12" borderRadius={9} {...defaultProps}>
+          <div className="stattextr11">Recovered</div>
+          <div className="stattextr1">{statedata.deltarecovered}</div>
+        </Box>
+        <Box className="statrow13" borderRadius={9} {...defaultProps}>
+          <div className="stattextr11">New Deaths</div>
+          <div className="stattextr1">{statedata.deltadeaths}</div>
+        </Box>
       </Grid>
 
       {console.log(statedata)}
