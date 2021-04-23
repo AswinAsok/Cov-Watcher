@@ -6,7 +6,7 @@ import Box from "@material-ui/core/Box";
 import Graph from "../Graph/Graph";
 
 const defaultProps = {
-  m: 1.25,
+  m: 0.6,
   style: { width: "25vw", padding: "5px"},
 };
 

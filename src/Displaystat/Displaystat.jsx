@@ -5,7 +5,7 @@ import "./Displaystat.css";
 import Nationalstat from "../Nationalstat/Nationalstat";
 
 const defaultProps = {
-  m: 1.25,
+  m: 0.6,
   style: { width: "25vw", padding: "5px"},
 };
 
