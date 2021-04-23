@@ -28,7 +28,9 @@ const Display = () => {
           return <Nationalstat data={data.cases_time_series} />;
         }
       })()}
+      <br></br>
       <Divider />
+      <br></br>
       <Dropdown data={data} />
     </div>
   );

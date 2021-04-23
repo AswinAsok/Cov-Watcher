@@ -9,7 +9,10 @@ const defaultProps = {
   style: { width: "25vw", height: "6.5vh" },
 };
 
-const Nationalstat = ({ data}) => {
+const Nationalstat = ({data}) => {
+
+  const data_length = data.length-1;
+
   return (
     <div>
       <br></br>
@@ -20,7 +23,20 @@ const Nationalstat = ({ data}) => {
         </Box>
       </Grid>
 
-      {console.log(data.length)}
+      <Grid container direction="row" justify="center" alignItems="center">
+        <Box className="statrow1" borderRadius={9} {...defaultProps}>
+          <div className="stattextr11">Confirmed</div>
+          <div className="stattextr1">{data[data_length].totalconfirmed}</div>
+        </Box>
+        <Box className="statrow2" borderRadius={9} {...defaultProps}>
+          <div className="stattextr11">Recovered</div>
+          <div className="stattextr1">{data[data_length].totalrecovered}</div>
+        </Box>
+        <Box className="statrow3" borderRadius={9} {...defaultProps}>
+          <div className="stattextr11">Deceased</div>
+          <div className="stattextr1">{data[data_length].totaldeceased}</div>
+        </Box>
+      </Grid>
     </div>
   );
 };
