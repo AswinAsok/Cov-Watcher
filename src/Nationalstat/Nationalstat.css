@@ -1,7 +1,4 @@
-.nationalstatheading{
-    background-color: #ffff;
-}
-
-.nationalstattext{
-    font-size: 20px;
+.nationalrow{
+    background-color: #3D93FF;
+    color: #ffff;
 }

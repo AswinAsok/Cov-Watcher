@@ -1,45 +1,31 @@
-.statrow1{
-    background-color:#3772FF;
-    color: #FCF7FF;
-}
-.statrow2{
-    background-color:#3772FF;
-    color: #FCF7FF;
-}
-.statrow3{
-    background-color:#3772FF;
+.staterowone{
+    background-color:#3D93FF;
     color: #FCF7FF;
 }
 
-
-.statrow11{
-    background-color:#403F4C;
-    color: #FCF7FF;
-}
-.statrow12{
-    background-color:#403F4C;
-    color: #FCF7FF;
-}
-.statrow13{
+.staterowtwo{
     background-color:#403F4C;
     color: #FCF7FF;
 }
 
-.stattextr1{
+
+.statetext{
+    font-size: 0.95em;
+}
+
+.statetextheading{
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: vw;
 }
 
-.stattextr11{
+.statecount{
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 3px;
 }
 
-.headingone{
+.lastupdated{
     margin-left: 5px;
     font-size: large;
     font-size: 15px;

@@ -25,17 +25,44 @@ const Nationalstat = ({ data }) => {
       <Divider />
       <br></br>
       <Grid container direction="row" justify="center" alignItems="center">
-        <Box className="statrow1" borderRadius={9} {...defaultProps}>
-          <div className="stattextr11">Confirmed</div>
-          <div className="stattextr1">{data[data_length].totalconfirmed}</div>
+        <Box className="nationalrow" borderRadius={9} {...defaultProps}>
+          <Grid
+            container
+            direction="column"
+            justify="center"
+            alignItems="center"
+          >
+            <div className="nationalheading">Confirmed</div>
+            <div className="nationalcount">
+              {data[data_length].totalconfirmed}
+            </div>
+          </Grid>
         </Box>
-        <Box className="statrow2" borderRadius={9} {...defaultProps}>
-          <div className="stattextr11">Recovered</div>
-          <div className="stattextr1">{data[data_length].totalrecovered}</div>
+        <Box className="nationalrow" borderRadius={9} {...defaultProps}>
+          <Grid
+            container
+            direction="column"
+            justify="center"
+            alignItems="center"
+          >
+            <div className="nationalheading">Recovered</div>
+            <div className="nationalcount">
+              {data[data_length].totalrecovered}
+            </div>
+          </Grid>
         </Box>
-        <Box className="statrow3" borderRadius={9} {...defaultProps}>
-          <div className="stattextr11">Deceased</div>
-          <div className="stattextr1">{data[data_length].totaldeceased}</div>
+        <Box className="nationalrow" borderRadius={9} {...defaultProps}>
+          <Grid
+            container
+            direction="column"
+            justify="center"
+            alignItems="center"
+          >
+            <div className="nationalheading">Deceased</div>
+            <div className="nationalcount">
+              {data[data_length].totaldeceased}
+            </div>
+          </Grid>
         </Box>
       </Grid>
       <br></br>
