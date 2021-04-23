@@ -7,7 +7,7 @@ import Graph from "../Graph/Graph";
 
 const defaultProps = {
   m: 1.25,
-  style: { width: "25vw", height: "6.5vh" },
+  style: { width: "25vw", padding: "5px"},
 };
 
 const Nationalstat = ({ data }) => {
@@ -29,7 +29,6 @@ const Nationalstat = ({ data }) => {
           <Grid
             container
             direction="column"
-            justify="center"
             alignItems="center"
           >
             <div className="nationalheading">Confirmed</div>

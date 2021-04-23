@@ -6,7 +6,7 @@ import Nationalstat from "../Nationalstat/Nationalstat";
 
 const defaultProps = {
   m: 1.25,
-  style: { width: "25vw", height: "6.5vh" },
+  style: { width: "25vw", padding: "5px"},
 };
 
 const Displaystat = ({ data, statecode, statedata, setStatedata }) => {

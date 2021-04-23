@@ -5,8 +5,7 @@ import './Header.css'
 
 const defaultProps = {
   m: 1,
-  border: 1,
-  style: { width: "12rem", height: "3rem" },
+  style: { width: "12rem", padding: "6px" },
 };
 
 const Header = () => {
