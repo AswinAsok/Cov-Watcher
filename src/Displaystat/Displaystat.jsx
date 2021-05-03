@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import "./Displaystat.css";
+import commafy from 'commafy'
 import Nationalstat from "../Nationalstat/Nationalstat";
 
 const defaultProps = {
@@ -37,19 +38,19 @@ const Displaystat = ({ data, statecode, statedata, setStatedata }) => {
         <Box className="staterowone" borderRadius={9} {...defaultProps}>
           <div className="statetext">
             <div className="statetextheading">Active</div>
-            <div className="statecount">{statedata.active}</div>
+            <div className="statecount">{commafy(statedata.active)}</div>
           </div>
         </Box>
         <Box className="staterowone" borderRadius={9} {...defaultProps}>
           <div className="statetext">
             <div className="statetextheading">Confirmed</div>
-            <div className="statecount">{statedata.confirmed}</div>
+            <div className="statecount">{commafy(statedata.confirmed)}</div>
           </div>
         </Box>
         <Box className="staterowone" borderRadius={9} {...defaultProps}>
           <div className="statetext">
             <div className="statetextheading">Deaths</div>
-            <div className="statecount">{statedata.deaths}</div>
+            <div className="statecount">{commafy(statedata.deaths)}</div>
           </div>
         </Box>
       </Grid>
@@ -60,19 +61,19 @@ const Displaystat = ({ data, statecode, statedata, setStatedata }) => {
         <Box className="staterowtwo" borderRadius={9} {...defaultProps}>
           <div className="statetext">
             <div className="statetextheading">New Cases</div>
-            <div className="statecount">{statedata.deltaconfirmed}</div>
+            <div className="statecount">{commafy(statedata.deltaconfirmed)}</div>
           </div>
         </Box>
         <Box className="staterowtwo" borderRadius={9} {...defaultProps}>
           <div className="statetext">
             <div className="statetextheading">Recovered</div>
-            <div className="statecount">{statedata.deltarecovered}</div>
+            <div className="statecount">{commafy(statedata.deltarecovered)}</div>
           </div>
         </Box>
         <Box className="staterowtwo" borderRadius={9} {...defaultProps}>
           <div className="statetext">
             <div className="statetextheading">New Deaths</div>
-            <div className="statecount">{statedata.deltadeaths}</div>
+            <div className="statecount">{commafy(statedata.deltadeaths)}</div>
           </div>
         </Box>
       </Grid>

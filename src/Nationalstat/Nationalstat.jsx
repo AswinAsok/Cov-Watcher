@@ -4,6 +4,7 @@ import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Graph from "../Graph/Graph";
+import addCommas from 'add-commas'
 
 const defaultProps = {
   m: 0.6,
@@ -33,7 +34,7 @@ const Nationalstat = ({ data }) => {
           >
             <div className="nationalheading">Confirmed</div>
             <div className="nationalcount">
-              {data[data_length].totalconfirmed}
+              {addCommas(data[data_length].totalconfirmed)}
             </div>
           </Grid>
         </Box>
@@ -46,7 +47,7 @@ const Nationalstat = ({ data }) => {
           >
             <div className="nationalheading">Recovered</div>
             <div className="nationalcount">
-              {data[data_length].totalrecovered}
+              {addCommas(data[data_length].totalrecovered)}
             </div>
           </Grid>
         </Box>
@@ -59,7 +60,7 @@ const Nationalstat = ({ data }) => {
           >
             <div className="nationalheading">Deceased</div>
             <div className="nationalcount">
-              {data[data_length].totaldeceased}
+              {addCommas(data[data_length].totaldeceased)}
             </div>
           </Grid>
         </Box>
